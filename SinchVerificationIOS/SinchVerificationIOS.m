@@ -1,5 +1,5 @@
 #import "SinchVerificationIOS.h"
-#import "RCTConvert.h"
+#import <React/RCTConvert.h>
 #import <SinchVerification/SinchVerification.h>
 
 @implementation SinchVerificationIOS
