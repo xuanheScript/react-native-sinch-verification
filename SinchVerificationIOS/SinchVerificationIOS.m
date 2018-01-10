@@ -23,8 +23,8 @@ RCT_EXPORT_METHOD(sms:(NSString *)applicationKey phoneNumber:(NSString *)phoneNu
                                                                               phoneNumber:phoneNumberInE164
                                                                                    custom:custom];
     self.verification = verification; // retain the verification instance
-    [verification initiateWithCompletionHandler:^(BOOL success, NSError *error) {
-        if (success) {
+    [verification initiateWithCompletionHandler:^(id<SINInitiationResult> result, NSError *error) {
+        if (result.success) {
             callback(@[[NSNull null]]);
         } else {
             callback(@[error.description]);
