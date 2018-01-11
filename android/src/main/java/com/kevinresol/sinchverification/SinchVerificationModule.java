@@ -67,7 +67,7 @@ public class SinchVerificationModule extends ReactContextBaseJavaModule {
         VerificationListener listener = new MyVerificationListener();
         String defaultRegion = PhoneNumberUtils.getDefaultCountryIso(mContext);
         String phoneNumberInE164 = PhoneNumberUtils.formatNumberToE164(phoneNumber, defaultRegion);
-        mVerification = SinchVerification.createSmsVerification(config, phoneNumberInE164, custom, listener);
+        mVerification = SinchVerification.createSmsVerification(config, phoneNumberInE164, listener);
         mVerification.initiate();
     }
 
